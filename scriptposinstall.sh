@@ -65,8 +65,8 @@ sublime_stuff(){
     remove_gimp_stuff{
         echo "Removendo Sublime-text"
         sudo add-apt-repository ppa:webupd8team/sublime-text-3 --remove
-        sudo apt-get remove sublime-text-installer
-        sudo apt-get autoremove
+        sudo apt-get remove sublime-text-installer --yes
+        sudo apt-get autoremove --yes
     }
 #Comunicacao
 skype_stuff(){
@@ -81,20 +81,20 @@ gimp_stuff(){
     sudo apt-get update --yes
     sudo apt-get install gimp -y
 }
-    remove_gimp_stuff{
+    remove_gimp_stuff(){
         echo "Removendo Gimp"
         sudo add-apt-repository ppa:nicola-onorata/desktop --remove
-        sudo apt-get remove gimp
-        sudo apt-get autoremove
+        sudo apt-get remove gimp --yes
+        sudo apt-get autoremove --yes
     }
 #Media
-vlc_stuff{
+vlc_stuff(){
     echo "Instalando VLC"
     sudo add-apt-repository ppa:videolan/stable-daily
     sudo apt-get update --yes
     sudo apt-get install vlc
 }
-    remove_vlc_stuff{
+    remove_vlc_stuff(){
         echo "Removendo VLC"
         sudo add-apt-repository ppa:videolan/stable-daily --remove
         sudo apt-get remove vlc
@@ -104,4 +104,11 @@ vlc_stuff{
 zram_stuff(){
     echo "Instalando Zram"
     sudo apt-get install zram-config
+}
+
+grive_tolls_stuff(){
+    echo "Instalando e Configurando o Grive"
+    sudo add-apt-repository ppa:thefanclub/grive-tools
+    sudo apt-get update --yes
+    sudo apt-get install grive grive-tools
 }
