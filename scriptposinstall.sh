@@ -112,3 +112,15 @@ grive_tolls_stuff(){
     sudo apt-get update --yes
     sudo apt-get install grive grive-tools
 }
+wine_stuff(){
+    echo "Configurando e instalando Wine"
+    sudo add-apt-repository ppa:ubuntu-wine/ppa
+    sudo add-apt-repository ppa:ricotz/unstable #opcional
+    sudo apt-get update --yes
+    sudo apt-get install wine1.8 winetricks
+}
+    remove_wine_stuff(){
+        echo "Removendo Wine"
+        sudo apt-get remove wine1.8 winetricks
+        sudo apt-get autoremove --yes
+    }
