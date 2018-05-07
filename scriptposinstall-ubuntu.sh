@@ -62,12 +62,6 @@ sublime_stuff(){
     sudo apt-get update --yes
     sudo apt-get install sublime-text-installer
 }
-    remove_gimp_stuff{
-        echo "Removendo Sublime-text"
-        sudo add-apt-repository ppa:webupd8team/sublime-text-3 --remove
-        sudo apt-get remove sublime-text-installer --yes
-        sudo apt-get autoremove --yes
-    }
 #Comunicacao
 skype_stuff(){
     echo "Baixando e instalando o Skype"
@@ -81,12 +75,6 @@ gimp_stuff(){
     sudo apt-get update --yes
     sudo apt-get install gimp -y
 }
-    remove_gimp_stuff(){
-        echo "Removendo Gimp"
-        sudo add-apt-repository ppa:nicola-onorata/desktop --remove
-        sudo apt-get remove gimp --yes
-        sudo apt-get autoremove --yes
-    }
 #Media
 vlc_stuff(){
     echo "Instalando VLC"
@@ -94,12 +82,6 @@ vlc_stuff(){
     sudo apt-get update --yes
     sudo apt-get install vlc
 }
-    remove_vlc_stuff(){
-        echo "Removendo VLC"
-        sudo add-apt-repository ppa:videolan/stable-daily --remove
-        sudo apt-get remove vlc
-        sudo apt-get autoremove
-    }
 #Desempenho
 zram_stuff(){
     echo "Instalando Zram"
